@@ -121,12 +121,15 @@ func (s *IssuesService) ListIssues(opt *ListIssuesOptions, options ...OptionFunc
 // https://gitlab.com/gitlab-org/gitlab-ce/blob/8-16-stable/doc/api/issues.md#list-issues
 type ListProjectIssuesOptions struct {
 	ListOptions
+	ID        *int    `url:"id,omitempty" json:"id,omitempty"`
 	IID       *int    `url:"iid,omitempty" json:"iid,omitempty"`
 	State     *string `url:"state,omitempty" json:"state,omitempty"`
 	Labels    Labels  `url:"labels,comma,omitempty" json:"labels,omitempty"`
 	Milestone *string `url:"milestone,omitempty" json:"milestone,omitempty"`
 	OrderBy   *string `url:"order_by,omitempty" json:"order_by,omitempty"`
 	Sort      *string `url:"sort,omitempty" json:"sort,omitempty"`
+	Author    *int    `url:"author_id,omitempty" json:"author_id,omitempty"`
+	Assignee  *int    `url:"assignee_id,omitempty" json:"assignee_id,omitempty"`
 }
 
 // ListProjectIssues gets a list of project issues. This function accepts
