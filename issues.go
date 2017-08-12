@@ -130,6 +130,7 @@ type ListProjectIssuesOptions struct {
 	Sort      *string `url:"sort,omitempty" json:"sort,omitempty"`
 	Author    *int    `url:"author_id,omitempty" json:"author_id,omitempty"`
 	Assignee  *int    `url:"assignee_id,omitempty" json:"assignee_id,omitempty"`
+	HasDuet   *bool   `url:"has_duet,omitempty" json:"has_duet,omitempty"`
 }
 
 // ListProjectIssues gets a list of project issues. This function accepts
