@@ -70,6 +70,7 @@ type Issue struct {
 	DueDate        string     `json:"due_date"`
 	WebURL         string     `json:"web_url"`
 	HasDuet        bool       `json:"has_duet"`
+	Weight         int        `json:"weight"`
 }
 
 func (i Issue) String() string {
